@@ -1,3 +1,5 @@
+use [People]
+
 --Sukurti lentelę Friend duomenų bazėj People. Lentelė turi du laukus: Id (auto incremented, primary key) ir Name.
 Create Table Friend
 (
