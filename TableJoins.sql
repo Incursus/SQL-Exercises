@@ -8,3 +8,8 @@ Inner Join Game
 On Streamer.PrimaryGameId=Game.Id
 
 --2. Paraðyti Join, kuris gauna Streamer vardus ir Game pavadinimus ið visø Streamer áraðø ir sutampanèiø Game áraðø.
+
+Select Streamer.Name, Game.Name
+From Streamer
+Left Join Game
+On Streamer.PrimaryGameId=Game.Id
