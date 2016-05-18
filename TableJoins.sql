@@ -13,3 +13,15 @@ Select Streamer.Name, Game.Name
 From Streamer
 Left Join Game
 On Streamer.PrimaryGameId=Game.Id
+
+--Paraðyti Join, kuris gauna Streamer vardus ir Game pavadinimus ið visø  sutampanèiø Streamer áraðø ir visø Game áraðø.
+Select Streamer.Name, Game.Name
+From Streamer
+Right Join Game
+On Streamer.PrimaryGameId=Game.Id
+
+--Paraðyti Join, kuris gauna Streamer vardus ir Game pavadinimus ið visø Streamer áraðø ir visø Game áraðø.
+Select Streamer.Name, Game.Name
+From Streamer
+Full Join Game
+On Streamer.PrimaryGameId=Game.Id
