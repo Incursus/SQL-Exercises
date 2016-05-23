@@ -2,6 +2,9 @@ If Not Exists(Select * From sys.databases where name='People')
 	Create Database People
 
 use [People]
+If Exists(Select * From sys.tables where name='Game')
+Drop Table Game
+
 Create Table Game
 (
 Id int not null identity(1, 1) Primary Key,
@@ -27,6 +30,9 @@ Insert into Game (Name)
 Values ('DST')
 Insert into Game (Name)
 Values ('Portal2')
+
+If Exists(Select * From sys.tables where name='Streamer')
+Drop Table Streamer
 
 Create Table Streamer
 (
