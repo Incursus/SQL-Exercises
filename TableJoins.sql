@@ -3,7 +3,10 @@ If Not Exists(Select * From sys.databases where name='People')
 
 use [People]
 If Exists(Select * From sys.tables where name='Game')
+Begin 
 Drop Table Game
+Print 'deleting table "Game"'
+End
 
 Create Table Game
 (
@@ -32,7 +35,10 @@ Insert into Game (Name)
 Values ('Portal2')
 
 If Exists(Select * From sys.tables where name='Streamer')
-Drop Table Streamer
+Begin
+Drop Table Streamer 
+Print 'deleting table "Streamer"'
+End
 
 Create Table Streamer
 (
