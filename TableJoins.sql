@@ -6,7 +6,7 @@ If Exists(Select * From sys.tables where name='Game')
 Begin 
 Drop Table Game
 Print 'deleting table "Game"'
-End
+
 
 Create Table Game
 (
@@ -33,12 +33,13 @@ Insert into Game (Name)
 Values ('DST')
 Insert into Game (Name)
 Values ('Portal2')
+End
 
 If Exists(Select * From sys.tables where name='Streamer')
 Begin
 Drop Table Streamer 
 Print 'deleting table "Streamer"'
-End
+
 
 Create Table Streamer
 (
@@ -56,6 +57,7 @@ Insert into Streamer(PrimaryGameId, Name)
 Values (2, 'Ducksauce')
 Insert into Streamer(PrimaryGameId, Name)
 Values (4, 'Alkaizer')
+End
 
 --1. Paraðyti Join, kuris gauna visus Streamer vardus ir Game pavadinimus, kurie sutampa. T.y. rodyti tik tuos streamerius, kurie loðia sutampanèius þaidimus.
 
